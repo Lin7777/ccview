@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<业务技能分排名百分比 &le; 0.24<br/>entropy = 0.711<br/>samples = 36<br/>value = [29, 7]<br/>class = Not Risky>, fillcolor="#eb9f69"] ;
+1 [label=<航班表现分排名百分比 &le; 1.442<br/>entropy = 0.229<br/>samples = 27<br/>value = [26, 1]<br/>class = Not Risky>, fillcolor="#e68641"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<entropy = 0.0<br/>samples = 25<br/>value = [25, 0]<br/>class = Not Risky>, fillcolor="#e58139"] ;
+1 -> 2 ;
+3 [label=<entropy = 1.0<br/>samples = 2<br/>value = [1, 1]<br/>class = Not Risky>, fillcolor="#ffffff"] ;
+1 -> 3 ;
+4 [label=<航班表现分排名百分比 &le; -0.711<br/>entropy = 0.918<br/>samples = 9<br/>value = [3, 6]<br/>class = Risky>, fillcolor="#9ccef2"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label=<entropy = 0.0<br/>samples = 3<br/>value = [3, 0]<br/>class = Not Risky>, fillcolor="#e58139"] ;
+4 -> 5 ;
+6 [label=<entropy = 0.0<br/>samples = 6<br/>value = [0, 6]<br/>class = Risky>, fillcolor="#399de5"] ;
+4 -> 6 ;
+}
